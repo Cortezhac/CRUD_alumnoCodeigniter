@@ -16,17 +16,8 @@ class alm_alumno_model extends CI_Model {
         }
     }
 
-    public function setAlumno($codigo, $nombre, $edad, $sexo, $id_grd, $observacion)
+    public function setAlumno($datos)
     {
-        $datos = array(
-            'alm_codigo' => $codigo,
-            'alm_nombre' => $nombre,
-            'alm_edad' => $edad,
-            'alm_sexo' => $sexo,
-            'alm_id_grd' => $id_grd,
-            'alm_observacion' => $observacion
-        );
-
         return $this->db->insert('alm_alumno', $datos);
     }
 

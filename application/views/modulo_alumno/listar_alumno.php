@@ -4,7 +4,7 @@
             <div class="card">
                 <div class="card-body">
                     <h3 class="card-title">Mantenimiento Alumnos</h3>
-                    <a name="" id="" class="btn btn-success" href="<?php echo base_url('modulo_alumno/nuevo_alumno')?>" role="button">Nuevo</a>
+                    <a class="btn btn-success" href="<?php echo base_url('modulo_alumno/alumno/nuevo_alumno')?>" role="button">Nuevo</a>
                     <table class="table table-striped table-inverse table-responsive">
                         <thead class="thead-inverse">
                             <tr>
