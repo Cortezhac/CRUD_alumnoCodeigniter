@@ -51,7 +51,7 @@ class Alumno extends CI_Controller {
             'required' => 'El %s es requerido'
         ));
 
-        $this->form_validation->set_rules('txtId_grd', 'Grado', 'required', array(
+        $this->form_validation->set_rules('txtIdGrd', 'Grado', 'required', array(
             'required' => 'EL %s es requerido'
         ));
 
@@ -60,7 +60,7 @@ class Alumno extends CI_Controller {
             'alm_nombre' => $this->input->post('txtNombre'),
             'alm_edad' => $this->input->post('txtEdad'),
             'alm_sexo' => $this->input->post('txtSexo'),
-            'alm_id_grd' => $this->input->post('txtId_grd'),
+            'alm_id_grd' => $this->input->post('txtIdGrd'),
             'alm_observacion' => $this->input->post('txtObservacion')
         );
 
