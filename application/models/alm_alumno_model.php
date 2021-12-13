@@ -44,7 +44,7 @@ class alm_alumno_model extends CI_Model {
         }
     }
 
-    public function eliminarGrado($id)
+    public function eliminar_alumno($id)
     {
         return $this->db->delete('alm_alumno', array('alm_id' => $id));
     }

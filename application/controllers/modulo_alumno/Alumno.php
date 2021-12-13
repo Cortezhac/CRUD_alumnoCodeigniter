@@ -104,4 +104,11 @@ class Alumno extends CI_Controller {
 
         redirect(base_url('modulo_alumno/alumno'));
     }
+
+    function eliminar_alumno()
+    {
+        $id = $this->uri->segment(4);
+        $this->alm_alumno_model->eliminar_alumno($id);
+        redirect(base_url('modulo_alumno/alumno'));
+    }
 }

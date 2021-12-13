@@ -44,6 +44,7 @@
                                     </td>
                                     <td>
                                         <a class="btn btn-primary" href="<?php echo base_url('modulo_alumno/alumno/editar_alumno/').$item->alm_id?>">Editar</a>
+                                        <a class="btn btn-danger" href="<?php echo base_url('modulo_alumno/alumno/eliminar_alumno/').$item->alm_id?>">Eliminar</a>
                                     </td>
                                 </tr>
                                 <?php endforeach?>
