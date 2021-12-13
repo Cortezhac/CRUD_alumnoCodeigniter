@@ -43,7 +43,7 @@
                                         <?php echo $item->alm_observacion ?>
                                     </td>
                                     <td>
-                                        
+                                        <a class="btn btn-primary" href="<?php echo base_url('modulo_alumno/alumno/editar_alumno/').$item->alm_id?>">Editar</a>
                                     </td>
                                 </tr>
                                 <?php endforeach?>
