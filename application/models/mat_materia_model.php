@@ -17,7 +17,7 @@ class mat_materia_model extends CI_Model {
     function getMateria($id){
         return $this->db->get_where('mat_materia', array(
             'mat_id' => $id
-        ));
+        ))->row();
     }
 
     function actualizar_materia($data, $id){

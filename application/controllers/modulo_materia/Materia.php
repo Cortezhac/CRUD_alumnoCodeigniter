@@ -13,16 +13,19 @@ class Materia extends CI_Controller {
         $this->load->model('mat_materia_model');
     }
 
-    function index(){
+    function index()
+    {
         $data['materia'] = $this->mat_materia_model->getMaterias();
         $this->cargarVista('modulo_materia/listar_materia', $data);
     }
 
-    function nueva_materia(){
+    function nueva_materia()
+    {
         $this->cargarVista('modulo_materia/nueva_materia');
     }
 
-    function guardar_materia(){
+    function guardar_materia()
+    {
         $datos = array(
             'mat_nombre' => $this->input->post('txtNombre')
         );
@@ -30,9 +33,28 @@ class Materia extends CI_Controller {
         redirect(base_url('modulo_materia/materia'));
     }
 
-    function cargarVista($nombreVista, $data = null){
+    function cargarVista($nombreVista, $data = null)
+    {
         $this->load->view('layouts/master_page_head');
         $this->load->view($nombreVista, $data);
         $this->load->view('layouts/master_page_footer');
+    }
+
+    function editar_materia()
+    {
+        $id = $this->uri->segment(4);
+        $datos['materia'] = $this->mat_materia_model->getMateria($id);
+        $this->cargarVista('modulo_materia/editar_materia', $datos);
+    }
+
+    function actualizar_materia()
+    {
+        $id = $this->input->post('mat_id');
+        $datos = array(
+            'mat_nombre' => $this->input->post('txtNombre')
+        );
+
+        $this->mat_materia_model->actualizar_materia($datos, $id);
+        redirect(base_url('modulo_materia/materia'));
     }
 }
